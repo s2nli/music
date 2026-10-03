@@ -1,0 +1,71 @@
+/* Codexstudys Music — additions layered on the compiled Tailwind build */
+.cx-logo{width:36px;height:36px;border-radius:9999px;flex:none;object-fit:cover;box-shadow:0 0 0 1px rgba(255,255,255,.1),0 0 18px rgba(139,92,246,.35)}
+.cx-logo--lg{width:40px;height:40px}
+.cx-word{display:flex;flex-direction:column;line-height:1;min-width:0}
+.cx-word b{font-weight:900;letter-spacing:-.04em;text-transform:uppercase;font-style:italic;color:#fff;font-size:1.25rem}
+.cx-word--sm b{font-size:1.05rem}
+.cx-word small{margin-top:5px;font-size:10px;font-weight:700;letter-spacing:.34em;text-transform:uppercase;color:#737373;padding-left:1px}
+.cx-hero-title{font-weight:900;font-style:italic;letter-spacing:-.05em;text-transform:uppercase;line-height:.95;color:#fff;font-size:clamp(1.7rem,8.6vw,2.9rem);text-align:center;max-width:100%}
+.cx-hero-title span{display:block;font-size:.48em;letter-spacing:.32em;color:#e11d48;margin-top:.55em;font-style:normal;font-weight:800}
+@media(min-width:768px){.cx-hero-title{font-size:5.5rem}}
+/* drawers & dialogs must sit above the sticky header (z-60) and the fixed bottom nav (z-100) */
+.fixed.inset-0.z-50{z-index:399!important}
+.fixed.z-50:not(.inset-0){z-index:400!important}
+
+/* install: compact pill (header) */
+.cx-pill{display:inline-flex;align-items:center;gap:6px;height:34px;padding:0 12px 0 10px;margin-right:4px;border-radius:9999px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.06);color:#fff;font:700 11px/1 system-ui,-apple-system,Segoe UI,sans-serif;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap;cursor:pointer;transition:background .15s,border-color .15s,transform .1s;-webkit-tap-highlight-color:transparent}
+.cx-pill:hover{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.24)}
+.cx-pill:active{transform:scale(.96)}
+.cx-pill svg{width:15px;height:15px;color:hsl(var(--primary))}
+@media(min-width:768px){.cx-pill--mobile{display:none}}
+@media(max-width:359px){.cx-pill span{display:none}.cx-pill{padding:0 9px}}
+
+/* install: card row (drawer, sidebar, settings) */
+.cx-install{display:flex;align-items:center;gap:12px;width:100%;padding:10px 12px;border-radius:16px;border:1px solid rgba(255,255,255,.1);background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.03));color:#fff;text-align:left;cursor:pointer;transition:background .15s,border-color .15s,transform .1s;-webkit-tap-highlight-color:transparent}
+.cx-install:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.2)}
+.cx-install:active{transform:scale(.985)}
+.cx-install__logo{width:36px;height:36px;border-radius:10px;flex:none;object-fit:cover}
+.cx-install__txt{display:flex;flex-direction:column;min-width:0;flex:1;gap:2px}
+.cx-install__txt b{font-size:13px;font-weight:800;letter-spacing:.01em}
+.cx-install__txt small{font-size:11px;color:#8a8a8a;line-height:1.25}
+.cx-install__ic{width:20px;height:20px;flex:none;color:hsl(var(--primary))}
+.cx-install--done{cursor:default;color:#a3a3a3;font-size:12px;font-weight:700;gap:8px;padding:12px 14px;background:transparent}
+.cx-install--done:hover{background:transparent;border-color:rgba(255,255,255,.1)}
+.cx-install--done svg{width:16px;height:16px;color:#22c55e}
+
+/* drawer / sidebar footer */
+.cx-foot{position:sticky;bottom:0;background:#000;z-index:2;display:flex;flex-direction:column;gap:6px;padding:12px 24px 24px;border-top:1px solid rgba(255,255,255,.06);margin-top:8px}
+.cx-row{display:flex;align-items:center;gap:14px;width:100%;padding:11px 14px;border-radius:14px;border:1px solid transparent;background:none;color:#8a8a8a;font:700 14px/1.2 system-ui,-apple-system,Segoe UI,sans-serif;cursor:pointer;text-align:left;transition:background .15s,color .15s}
+.cx-row:hover{background:rgba(255,255,255,.05);color:#fff}
+.cx-row svg{width:20px;height:20px;flex:none}
+.cx-row--danger:hover{background:rgba(225,29,72,.12);color:#fb7185}
+.cx-badge{font-size:10px;font-weight:900;color:hsl(var(--primary));background:hsl(var(--primary)/.2);padding:2px 8px;border-radius:9999px}
+.cx-ico-tile{padding:4px;border-radius:6px;background:#262626;color:#fff;display:inline-flex}
+.cx-ico-tile--dl{background:linear-gradient(135deg,#4c1d95,#7c3aed)}
+
+/* dialogs */
+.cx-dialog{background:#0b0b0d!important;border:1px solid rgba(255,255,255,.1)!important;color:#fff!important;border-radius:20px!important;max-width:min(92vw,440px)!important;padding:22px!important}
+.cx-dialog h2{font-size:18px;font-weight:900;letter-spacing:-.02em;text-transform:uppercase;font-style:italic}
+.cx-dialog p{color:#a3a3a3;font-size:14px;line-height:1.55}
+.cx-dialog__sec{display:flex;flex-direction:column;gap:10px;margin-top:6px}
+.cx-dialog__lab{font-size:10px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:#6b6b6b;margin-top:8px}
+.cx-stat{display:flex;justify-content:space-between;gap:12px;font-size:13px;color:#d4d4d4;padding:10px 12px;border-radius:12px;background:rgba(255,255,255,.04)}
+.cx-stat span:last-child{color:#fff;font-weight:700}
+.cx-actions{display:flex;gap:10px;justify-content:flex-end;margin-top:14px}
+.cx-btn{height:40px;padding:0 18px;border-radius:12px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.06);color:#fff;font:700 13px system-ui,-apple-system,sans-serif;cursor:pointer;transition:background .15s}
+.cx-btn:hover{background:rgba(255,255,255,.12)}
+.cx-btn:disabled{opacity:.5;cursor:default}
+.cx-btn--danger{background:#be123c;border-color:#be123c}
+.cx-btn--danger:hover{background:#e11d48}
+.cx-btn--danger-outline{border-color:rgba(225,29,72,.5);color:#fb7185;background:rgba(225,29,72,.08);width:100%}
+.cx-steps{margin:6px 0 0;padding-left:20px;color:#d4d4d4;font-size:14px;line-height:1.7}
+.cx-steps li::marker{color:hsl(var(--primary));font-weight:800}
+
+/* song card ⋯ menu: always reachable on touch, hover-reveal on desktop */
+.cx-card-menu{transition:opacity .15s}
+@media(min-width:768px){.cx-card-menu{opacity:0}.group:hover .cx-card-menu,.cx-card-menu:focus-within{opacity:1}}
+
+/* player extras */
+.cx-dl-done{color:hsl(var(--primary))!important}
+.safe-area-bottom{padding-bottom:calc(1.5rem + env(safe-area-inset-bottom,0px))}
+html,body{overscroll-behavior-y:none}
